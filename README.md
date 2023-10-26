@@ -7,9 +7,8 @@ For a true distribution `p`, we have
 
 The mathematical definition for it could be:
 
-$$
-H(p, q) = -\sum_{i=0}^{N-1} p(i) \ln(q(i))
-$$
+$$ H(p, q) = -\sum_{i=0}^{N-1} p(i) \ln(q(i)) $$
+
 where 
 - we are summing over a series of terms each corresponding to a different category/class `i`, 
 from `i = 0` to `i = N -1`.
