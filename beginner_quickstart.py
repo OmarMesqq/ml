@@ -50,7 +50,15 @@ model.fit(x_train, y_train, epochs=5)
 model.evaluate(x_test,  y_test, verbose=2)
 
 # Convert the raw logits (any real number) to probabilities (float between 0 and 1)
+# by adding a softmax layer
 probability_model = tf.keras.Sequential([model, tf.keras.layers.Softmax()])
 
-# ! Let's see the prediction for the initial 5 test images
-print(probability_model(x_test[:5]))
+# Make predictions on the first 5 test images
+predictions = probability_model(x_test[:5])
+
+# Get the predicted labels
+predicted_labels = tf.argmax(predictions, axis=1)
+
+
+print(f'True labels: {y_test[:5]}')
+print(f'Predicted labels: {predicted_labels.numpy()}')
