@@ -71,6 +71,7 @@ x_train, x_test = x_train / 255.0, x_test / 255.0
 ```
 
 the data is normalized by dividing it by 255.0 (the maximum value of a pixel). This way, the values of the pixels will be in the range `[0, 1]`.
+
 :warning: changes the data, but not the relationship between them.
 
 ### Flattening:
